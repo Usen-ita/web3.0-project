@@ -4,7 +4,7 @@
 URL - https://curious-sopapillas-2229a4.netlify.app/ 
 
 ## Introduction
-This is a code repository for the video tutorial - https://www.youtube.com/watch?v=Wn_Kb3MR_cU 
+This is a code repository I created from the video tutorial - https://www.youtube.com/watch?v=Wn_Kb3MR_cU 
 
 Using Web 3.0 methodologies, I learned Solidity, Metamask, hardhat framework, tailwind.css and vite framework. 
 
