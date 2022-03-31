@@ -21,6 +21,7 @@ const createEthereumContract = () => {
      const [formData, setFormData] = useState({ addressTo: '', amount: '', keyword: '', message: ''});
      const [isLoading, setIsLoading] = useState(false);
      const [transactionCount, setTransactionCount] = useState(localStorage.getItem('transactionCount'));
+     const [transactions, setTransactions] = useState([]);
 
      const handleChange = (e, name) => {
         setFormData((prevState) => ({...prevState, [name]: e.target.value}));
@@ -44,7 +45,7 @@ const createEthereumContract = () => {
   
           console.log(structuredTransactions);
   
-          sendTransaction(structuredTransactions);
+          setTransactions(structuredTransactions);
         } else {
           console.log("Ethereum is not present");
         }
@@ -116,7 +117,7 @@ const createEthereumContract = () => {
               params: [{
                 from: currentAccount,
                 to: addressTo,
-                gas: "0x5208",
+                gas: "0x5208", //21000 gwei
                 value: parsedAmount._hex,
               }],
             });
@@ -149,7 +150,7 @@ const createEthereumContract = () => {
     }, []);
 
     return(
-        <TransactionContext.Provider value={{ connectWallet, currentAccount, formData, setFormData, handleChange, sendTransaction}}> 
+        <TransactionContext.Provider value={{ connectWallet, currentAccount, formData, setFormData, handleChange, sendTransaction, transactions, isLoading}}> 
             {children}
         </TransactionContext.Provider>
     )
