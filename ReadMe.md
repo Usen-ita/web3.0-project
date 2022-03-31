@@ -1,6 +1,6 @@
 # Krypt - Web 3.0 Blockchain Application
-![Krypt](https://i.ibb.co/DVF4tNW/image.png)
-<<//add ss here>>
+![krypt (Usen's)](https://user-images.githubusercontent.com/83946606/161163897-336d83aa-3867-420f-9765-3dc34bd66a86.png)
+
 URL - https://curious-sopapillas-2229a4.netlify.app/ 
 
 ## Introduction
