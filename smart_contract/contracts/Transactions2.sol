@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 
 contract Transactions {
     //number variable that is going to hold the number of transactions
-  uint256 transactiionCount;
+  uint256 transactionCount;
 
     //function that will be called
   event Transfer(address from, address receiver, uint amount, string message, uint timestamop, string keyword);
@@ -25,7 +25,7 @@ contract Transactions {
   TransferStruct[] transactions;
 
   function addToBlockChain(address payable receiver, uint amount, string memory message, string memory keyword) public {
-      transactiionCount +=1;
+      transactionCount +=1;
       //to store all the transaction that come thtough use code line 30.
       transactions.push(TransferStruct(msg.sender, receiver, amount, message, block.timestamp, keyword));
 
@@ -40,7 +40,7 @@ contract Transactions {
   }
 
     function getTransactionCount() public view returns(uint256){
-        return transactiionCount;  
+        return transactionCount;  
       
   }
 
